@@ -4,21 +4,35 @@
 
 ## Descrição
 
-Este projeto é uma API REST de uma calculadora que permite realizar operações matemáticas básicas (soma, subtração, multiplicação e divisão). Foi desenvolvida utilizando JavaNode.js e Express, com foco em simplicidade e funcionalidade.
+Este projeto é uma **API REST** de uma calculadora, desenvolvida com **Node.js** e **Express**, que permite realizar operações matemáticas básicas: soma, subtração, multiplicação e divisão. O foco é a simplicidade e a funcionalidade.
 
-## Linguagem Utilizada
+## Linguagens e Tecnologias Utilizadas
 
--**JavaScript:** Usado para o desenvolvimento da lógica da calculadora e na configuração da API.
+- **JavaScript**: Usado para o desenvolvimento da lógica da calculadora e na configuração da API.
+- **Node.js**: Ambiente de execução para a API.
+- **Express**: Framework para criação de APIs REST.
+- **Body-parser**: Middleware para parsing do corpo das requisições.
 
-## Estrutura do Projeto
+## Estrutura de Pastas
 
-- **app.js**: Configura o middleware e as rotas principais.
-- **server.js**: Inicializa o servidor na porta especificada.
-- **calculatorAddController.js**: Contém a lógica da adição.
-- **calculatorDivideController.js**: Contém a lógica da divisão.
-- **calculatorMultiplyController.js**: Contém a lógica da multiplicação.
-- **calculatorSubtractController.js**: Contém a lógica da subtração.
-- **calculatorRoutes.js**: Define as rotas e conecta ao controller.
+A estrutura do projeto está organizada da seguinte forma:
+
+```
+calculadora-api/
+├── README.md
+├── ARCHITECTURE.md
+├── docs/
+│   └── architecture-diagram.svg
+├── server.js
+├── app.js
+├── routes/
+│   └── calculatorRoutes.js
+└── controllers/
+    ├── calculatorAddController.js
+    ├── calculatorSubtractController.js
+    ├── calculatorMultiplyController.js
+    └── calculatorDivideController.js
+```
 
 ## Funcionalidades
 
@@ -27,44 +41,37 @@ A API oferece as seguintes operações matemáticas:
 - **Adição**: `POST /add`
 - **Subtração**: `POST /subtract`
 - **Multiplicação**: `POST /multiply`
-- **Divisão**: `POST /divide
-
-## Tecnologias Utilizadas
-
-- Node.js
-- Express
-- Body-parser
+- **Divisão**: `POST /divide`
 
 ## Instalação
 
 1. Clone este repositório:
 
-   ```bash
-   git clone https://github.com/MarceloMendes021/calculadora-api
-   ```
+```bash
+git clone https://github.com/MarceloMendes021/calculadora-api
+```
 
 2. Navegue até o diretório do projeto:
 
-   ```bash
-   cd calculadora-api
-   ```
+```bash
+cd calculadora-api
+```
 
 3. Instale as dependências:
-   ```bash
-   npm install
-   ```
 
-## U
+```bash
+npm install
+```
+
+## Execução
 
 1. Inicie o servidor:
 
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+```
 
-   O servidor estará disponível em: `http://localhost:3000`.
-
-2. Faça requisições para a API nos endpoint abaixo:
+O servidor estará disponível em: `http://localhost:3000`.
 
 ## Rotas e Exemplos
 
@@ -73,18 +80,21 @@ A API oferece as seguintes operações matemáticas:
 - **Endpoint**: `POST /add`
 - **Descrição**: Soma dois números fornecidos.
 - **Body**:
-  ```json
-  {
-    "number1": 10,
-    "number2": 5
-  }
-  ```
+
+```json
+{
+  "number1": 13,
+  "number2": 5
+}
+```
+
 - **Resposta**:
-  ```json
-  {
-    "resultado": 15
-  }
-  ```
+
+```json
+{
+  "resultado": 18
+}
+```
 
 ---
 
@@ -93,18 +103,21 @@ A API oferece as seguintes operações matemáticas:
 - **Endpoint**: `POST /subtract`
 - **Descrição**: Subtrai o segundo número do primeiro.
 - **Body**:
-  ```json
-  {
-    "number1": 10,
-    "number2": 5
-  }
-  ```
+
+```json
+{
+  "number1": 13,
+  "number2": 5
+}
+```
+
 - **Resposta**:
-  ```json
-  {
-    "resultado": 5
-  }
-  ```
+
+```json
+{
+  "resultado": 8
+}
+```
 
 ---
 
@@ -113,18 +126,21 @@ A API oferece as seguintes operações matemáticas:
 - **Endpoint**: `POST /multiply`
 - **Descrição**: Multiplica dois números fornecidos.
 - **Body**:
-  ```json
-  {
-    "number1": 10,
-    "number2": 5
-  }
-  ```
+
+```json
+{
+  "number1": 10,
+  "number2": 3
+}
+```
+
 - **Resposta**:
-  ```json
-  {
-    "resultado": 50
-  }
-  ```
+
+```json
+{
+  "resultado": 30
+}
+```
 
 ---
 
@@ -133,24 +149,29 @@ A API oferece as seguintes operações matemáticas:
 - **Endpoint**: `POST /divide`
 - **Descrição**: Divide o primeiro número pelo segundo.
 - **Body**:
-  ```json
-  {
-    "number1": 10,
-    "number2": 5
-  }
-  ```
+
+```json
+{
+  "number1": 20,
+  "number2": 5
+}
+```
+
 - **Resposta**:
-  ```json
-  {
-    "resultado": 2
-  }
-  ```
+
+```json
+{
+  "resultado": 4
+}
+```
+
 - **Erro para divisão por zero**:
-  ```json
-  {
-    "error": "Não é possivel realizar divisão por 0"
-  }
-  ```
+
+```json
+{
+  "error": "Não é possível realizar divisão por 0"
+}
+```
 
 ---
 
@@ -164,6 +185,10 @@ Você pode testar a API utilizando ferramentas como [Postman](https://www.postma
 curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"number1": 4, "number2": 5}'
 ```
 
+## Arquitetura
+
+Para mais detalhes sobre a arquitetura do projeto e decisões técnicas, consulte o arquivo [ARCHITECTURE.md](./ARCHITECTURE.md).
+
 ## Contribuição
 
-Contribuições são bem-vindas!
+Contribuições são bem-vindas! Se desejar melhorar este projeto, fique à vontade para abrir uma **pull request**.
