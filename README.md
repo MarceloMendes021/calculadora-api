@@ -1,4 +1,4 @@
-# Calculadora com API
+# Calculadora API
 
 ![GitHub License](https://img.shields.io/github/license/MarceloMendes021/calculadora-api)
 
@@ -6,7 +6,7 @@
 
 Este projeto é uma **API REST** de uma calculadora, desenvolvida com **Node.js** e **Express**, que permite realizar operações matemáticas básicas: soma, subtração, multiplicação e divisão. O foco é a simplicidade e a funcionalidade.
 
-## Linguagens e Tecnologias Utilizadas
+## Tecnologias
 
 - **JavaScript**: Usado para o desenvolvimento da lógica da calculadora e na configuração da API.
 - **Node.js**: Ambiente de execução para a API.
@@ -188,7 +188,3 @@ curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{
 ## Arquitetura
 
 Para mais detalhes sobre a arquitetura do projeto e decisões técnicas, consulte o arquivo [ARCHITECTURE.md](./ARCHITECTURE.md).
-
-## Contribuição
-
-Contribuições são bem-vindas! Se desejar melhorar este projeto, fique à vontade para abrir uma **pull request**.
