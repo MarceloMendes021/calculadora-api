@@ -83,7 +83,7 @@ curl -X POST http://localhost:3000/add \
 
 O fluxo de uma requisição segue o padrão Client-Server com camadas separadas por responsabilidade:
 
-![Diagrama de fluxo da aplicação](./docs/architecture-diagram.svg)
+<img src="./docs/architecture-diagram.svg" alt="Diagrama de fluxo da aplicação" width="600">
 
 **`src/server.js`** — inicia o servidor na porta definida.
 
